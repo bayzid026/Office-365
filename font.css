@@ -1,0 +1,1395 @@
+﻿/* Overrides ALL fonts to Arial */
+
+/*
+All of the CSS selectors in this files are defined in SP Server's OOTB CSS files.
+All CSS files installed in 14 hive have been searched for all occurances of font-family: Verdana, <anything else>" and "font-family: Tahoma, <any thing else>".
+They are overriden in this file.
+
+Could group ALL selectors and just declare the font once, but that is annoying in CSS debuggers.
+Can not do a generic "body font-face: Arial !important  !important  !important ;" because we don't want to replace other fonts than Arial and Helvetica,
+and there are some places were it would break stuff, like in wysiwyg editors.
+
+CSS styles specified directly in pages/controls will not be overriden, but could be added to this file if such occurrances are found.
+*/
+
+
+
+/* 14\template\<lcid>\sts\doctemp\ppt\master03.css
+/* 14\template\<lcid>\sts\doctemp\xl\style.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\aurora.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\band.css (SPServer only) */
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\Vertical.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+
+@font-face {
+    font-family: 'StagSansWebMedium';
+    src: url('../fonts/StagSansWeb-Medium.eot');
+    src: url('../fonts/StagSansWeb-Medium.eot#iefix') format('embedded-opentype'), url('../fonts/StagSansWeb-Medium.woff') format('woff'), url('../fonts/StagSansWeb-Medium.ttf') format('truetype'), url('../fonts/StagSansWeb-Medium.svg') format('svg'), // url('../fonts/STAGSANS-MEDIUM.OTF') format('opentype');
+}
+
+@font-face {
+    font-family: 'StagSansWebBook';
+    src: url('../fonts/StagSansWeb-Book.eot');
+    src: url('../fonts/StagSansWeb-Book.eot#iefix') format('embedded-opentype'), url('../fonts/StagSansWeb-Book.woff') format('woff'), url('../fonts/StagSansWeb-Book.ttf') format('truetype'), url('../fonts/StagSansWeb-Book.svg') format('svg'), // url('../fonts/STAGSANS-BOOK.OTF') format('opentype');
+}
+
+.breadcrumb,
+a.#zz8_Menu, a.#zz1_MyLinksMenuMenu,
+.logo,
+.topLinkBar a, .toplinkbar a:active,
+.topNavItem,
+.topNavFlyOutsItem,
+.leftNav1,
+.leftNav1 a,
+.leftNav2,
+.leftNav3,
+.leftNavFlyOuts,
+.pageTitle,
+.bottomLinkBar {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+.ms-cui-ribbon, ms-siteactionmenuinner {
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\band-21.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.breadcrumb,
+.tabs-menu-secondary .menu {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\edit-mode-21.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ms-formfieldlabelcontainer {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\nightandday.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\pagelayouts.css (SPServer only) */
+/* Verdana */
+.caption,
+/* Tahoma */
+.header,
+.pageContent {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\page-layouts-21.css (SPServer only) */
+/* Verdana */
+.captioned-image .caption
+/* Tahoma */
+/*NONE*/ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\SingleLevel.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.topLinkBar, .topLinkBar a, .toplinkbar a:active {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+    /* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\single-level-21.css (SPServer only) */
+    /* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\suburb.css (SPServer only) */
+    /* Verdana */
+    /* NONE */
+    /* Tahoma */
+    /* NONE */
+
+
+
+
+    /* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\tabs.css (SPServer only) */
+    /* Verdana */
+    /* NONE */
+    /* Tahoma */
+    .breadcrumb,
+    a.#zz8_Menu, a.#zz1_MyLinksMenuMenu,
+    .logo,
+    .topLinkBar a, .toplinkbar a:active,
+    .topNav1Item,
+    .topNav2Item,
+    .leftNav1,
+    .leftNav1 a,
+    .leftNav2,
+    .leftNav3,
+    .leftNavFlyOuts,
+    .pageTitle,
+    .bottomLinkBar {
+        /*font-family: Arial, Sans-Serif;*/
+        font-family: 'StagSansWebBook', Verdana;
+    }
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\twilight.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\zz2_EditMode.css (SPServer only) */
+/* Verdana */
+.editModePanel span
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\Styles\*.*  (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+/* 14\template\layouts\PPSImport.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\accessserver.css (SPServer only) */
+/* 14\template\layouts\styles\jsgrid.css (SPServer only?) */
+/* Verdana */
+.acc-message,
+/* Tahoma */
+.jsgrid-error-notification {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\template\layouts\<lcid>\styles\blog.css */
+/* Verdana */
+.ms-postcalendardateboxbottom,
+.ms-formvalidation,
+.ms-long,
+/* Tahoma */
+.ms-ButtonHeightWidth,
+.ms-ButtonHeightWidth2 {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\template\layouts\<lcid>\styles\calendar.css */
+/* only used on v3 masterpages. */
+
+/* 14\template\layouts\<lcid>\styles\calendarv4.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\controls.css (SPServer only) */
+/* 14\TEMPLATE\FEATURES\PublishingLayouts\xx-xx\HtmlEditorStyles.css (SPServer only) */
+/* 14\template\layouts\<lcid>\styles\controls.css (SPServer only) */
+/* 14\template\layouts\<lcid>\styles\HtmlEditorStyles.css (SPServer only)*/
+/* Verdana */
+.ms-rteElement-Callout4,
+.ms-rteStyle-Normal,
+/* NOT .ms-rteThemeFontFace-1 */
+.ms-rte-autocomplete,
+.ms-rte-wpbox,
+/* Tahoma */
+.link-item, .link-item a, .link-item a:link,
+.link-item-large, .link-item-large a, .link-item-large a:link,
+.description,
+.groupheader,
+.level-description,
+.level-item, .level-item a, .level-item a:link,
+.headertitle, .headertitle a, .headertitle a:link,
+.headertitle-large, .headertitle-large a, .headertitle-large a:link,
+.headertitle-small, .headertitle-small a, .headertitle-small a:link,
+.headertitle-band, .headertitle-band a, .headertitle-band a:link
+/* NOT .ms-rteFontFace-1! */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\core.css */
+/* only used on v3 masterpages. */
+
+/* 14\template\layouts\<lcid>\styles\corev4.css */
+/* 14\template\layouts\<lcid>\styles\mblrte.css */
+/* note that corev4.css includes all selectors that layouts.css does + many many many more
+/* Verdana */
+.ms-toolbar,
+.ms-menutoolbar td a,
+td.ms-menutoolbarheader,
+.ms-listheaderlabel, .ms-viewselector, .ms-viewselectortext, .ms-viewselectorhover,
+.ms-viewselect a:link,
+select,
+.ms-input,
+.ms-pagetitle,
+.ms-webpartpagedescription,
+.ms-propertysheet,
+.ms-propertysheet th,
+.ms-vh, .ms-vh2, .ms-vh-icon, .ms-vh-icon-empty, .ms-vhImage, .ms-gb, .ms-gb2, .ms-gbload, .ms-vb, .ms-vb2, .ms-vb-tall, .ms-vb-user, .ms-vh2-nograd, .ms-vh3-nograd, .ms-vh2-nograd-icon, .ms-vh2-nofilter-icon, .ms-pb, .ms-pb-selected, .ms-ph,
+th .ms-vb, .ms-vh2-nofilter-icon, th.ms-vh2-nograd, th.ms-vh2-nograd-icon,
+a.ms-addnew,
+.ms-error,
+.ms-WPTitle,
+.ms-WPBody,
+.ms-WPBody td,
+.ms-pickerwait,
+.ms-formvalidation,
+.ms-ribbontabswitchloading span,
+.ms-welcomepageheader,
+div.ms-MenuUIPopupBody.ms-MenuUIPopupScreen, div.ms-MenuUIPopupBody.ms-MenuUIPopupScreen div.ms-MenuUIPopupInner, div.ms-MenuUIPopupBody.ms-MenuUIPopupScreen div.ms-MenuUIPopupInner div,
+.ms-wpadder-sectionhead,
+.ms-wpadder-wpname,
+body,
+.ms-welcomeMenu,
+.s4-titletable,
+.ms-ltviewselectormenuheader .ms-viewselector a, .ms-ltviewselectormenuheader .ms-viewselectorhover a,
+.s4-search select,
+body #pageStatusBar,
+.ms-rteElement-Callout4,
+.ms-rteStyle-Normal,
+/*NOT .ms-rteThemeFontFace-1! A user actively selects Verdana to apply that style! */
+.ms-rte-autocomplete,
+.ms-rte-wpbox,
+.ms-rtedialog,
+.ms-dlgTitleText,
+.ms-linksection-level1,
+.ms-linksection-level2,
+.ms-ratingPopup,
+/* Tahoma */
+.ms-paging,
+table.ms-navitem td, span.ms-navitem,
+.ms-nav,
+.ms-titlearea,
+.ms-propertysheet th.ms-vh2, .ms-propertysheet th.ms-vh2-nofilter,
+.ms-descriptiontext,
+.ms-statusdescriptiontext,
+.ms-propertysheet th.ms-linksectionheader,
+th.ms-vh3-nograd,
+.ms-pb a, .ms-pb-selected a,
+.ms-ButtonHeightWidth,
+.ms-NarrowButtonHeightWidth,
+.ms-ButtonHeightWidth2,
+table.ms-listviewtable > tbody > tr > td.ms-stylebox,
+.ms-stylelabel,
+.ms-styleheader,
+.ms-stylebody,
+.ms-SPLink,
+/*NOT: .ms-rteFontFace-1 A user actively selects Tahoma to apply that style! */
+.ms-developerdashboard > table tr td {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\template\layouts\<lcid>\styles\cui.css */
+/* 14\template\layouts\<lcid>\styles\cuidark.css */
+/*(CUI = Command UI = Ribbon. Segoe only.*/
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+/* 14\template\layouts\<lcid>\styles\datepicker.css */
+/* only used on v3 masterpages. */
+
+
+/* 14\template\layouts\<lcid>\styles\datepickerv4.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ms-picker-table .ms-picker-dayheader,
+.ms-picker-weekbox,
+.ms-picker-weekboxRTL,
+table.ms-picker-table td.ms-picker-today,
+table.ms-picker-table td.ms-picker-dayother, table.ms-picker-table td.ms-picker-daycenterOn, table.ms-picker-table td.ms-picker-daycenter,
+table.ms-picker-table td.ms-picker-dayselected,
+.ms-picker-monthcenter a, .ms-picker-monthcenter a:active, .ms-picker-monthcenter a:link, .ms-picker-monthcenter a:visited,
+.ms-picker-monthcenterOn a, .ms-picker-monthcenterOn a:active, .ms-picker-monthcenterOn a:link, .ms-picker-monthcenterOn a:visited,
+.ms-picker-monthselected a, .ms-picker-monthselected a:active, .ms-picker-monthselected a:link, .ms-picker-monthselected a:hover, .ms-picker-monthselected a:visited,
+table.ms-picker-table td.ms-picker-footer {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\discthread.css */
+/* Verdana */
+table tr td.ms-disc-bordered-noleft,
+/* Tahoma */
+table.ms-disc td {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\template\layouts\<lcid>\styles\EwaCui.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\EwrDefault.css (SPServer only) */
+/* Verdana */
+.ms-pagetitle,
+.ms-propertysheet,
+.ewr-dialog-button,
+.ewr-dialog-font,
+.ewr_node_partialcheck,
+/* Tahoma */
+.ewa-flb,
+.ewa-flb table td,
+.ewrol,
+.ewrol-columngroup td, .ewrol-rowgroup td, .ewrol-rowgroup a, .ewrol-columngroup a, .ewrol-column a.ewrol-button, .ewrol-row a.ewrol-button,
+.ewa-ms-titlearea,
+.ewa-ms-globallinks,
+.ewa-ms-globallinks, .ewa-ms-globallinks a,
+div.ewrch-col-title, div.ewrch-row-title,
+.ewr-filter-dialog-body {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\forms.css */
+/* Verdana */
+.ms-formtoolbar,
+.ms-rtetoolbarmenu,
+.ms-gridT1,
+.ms-gridCol,
+.ms-formvalidation,
+.ms-radiotext,
+.ms-gridtext,
+.ms-formbodysurvey,
+.ms-formdescription,
+.ms-formrecurrence,
+.ms-fileinput,
+.ms-longfileinput,
+.ms-rtelong, .ms-longer, .ms-rtelonger, .ms-radiotext, .ms-rtedropdown, .ms-lookuptypeintextbox, .ms-rtefield,
+.ms-inputuserfield,
+.ms-formlabel, /* in owsnocr.css, survey.css, forms.css, layouts.css+pickertree.css */
+.ms-long,
+/* Tahoma */
+.ms-informationbar td,
+div.ms-formfieldlabelcontainer span.ms-formfieldlabel {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\ganttwss.css */
+/* Verdana */
+.ms-ganttInnerTable td, .ms-ganttInnerTable th
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\groupboard.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ms-gb-tc-table,
+.ms-cal-navheader {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\help.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ms-HPMainBody,
+.ms-HPcdSideBoxTop {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebMedium', Verdana;
+}
+
+
+
+/* 14\template\layouts\<lcid>\styles\layouts.css*/
+/* 14\template\layouts\<lcid>\styles\pickertree.css*/
+/* note that pickertree.css includes all selectors that layouts.css does + some more */
+/* Verdana */
+.ms-formula,
+.ms-dspadapterlist,
+.ms-pageinformation h3.ms-standardheader,
+.ms-vh2-nofilter, .ms-vh2-nofilter-notextalign,
+.UserButton,
+.ms-subsmanageheader,
+.ms-subsmanagecell,
+.ms-smallheader, th.ms-smallheader,
+.ms-create-h2, .ms-create-h2b, .ms-create-h2d,
+.ms-create-h3,
+.ms-create-sectionheader,
+.ms-create-listitem-a,
+.ms-listedit table.ms-pageinformation, .ms-listedit .ms-pageinformation table td, .ms-listedit .ms-propertysheet, .ms-listedit .ms-descriptiontext,
+.ms-listedit .ms-standardheader, .ms-listedit .ms-linksectionheader, .ms-listedit .ms-linksectionheader .ms-standardheader,
+.ms-inputuserfield,
+.ms-formlabel, /* in owsnocr.css, survey.css, forms.css, layouts.css+pickertree.css */
+.ms-long,
+.TmtTree .treenodediv1,
+.TmtTree .ms-input,
+.TmtTree .ms-inputbold,
+.ms-phhr,
+.ms-inputuserfield,
+/* Tahoma */
+.ms-templatepicker select,
+.ms-propertysheet th.ms-vh2-nofilter-notextalign,
+.ms-sectionheader,
+.ms-linksectionheader,
+.ms-sectionhighlight-top,
+table.ms-pageinformation, table.ms-createpageinformation,
+.ms-pageinformation table td, .ms-createpageinformation table td,
+.ms-NarrowButtonHeightWidth,
+.ms-wikifieldheader,
+.ms-dialogHeaderDescription,
+.ms-dialogHelpLink, .ms-dialogHelpLink a,
+.ms-dialogBodyMain,
+.ms-dialogButtonCell, .ms-dialogButtonCell INPUT,
+.ms-buttonHeightWidth {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\menu.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ms-MenuUIItemTableCell, .ms-MenuUIItemTableCellCompact,
+.ms-MenuUIItemTableCellHover, .ms-MenuUIItemTableCellCompactHover {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\menu-21.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+/* 14\template\layouts\<lcid>\styles\minimalv4.css */
+/* Only used by minimal.master which we have't branded */
+
+/* 14\template\layouts\<lcid>\styles\mws.css */
+/* Verdana */
+.ms-alerttext,
+/* Tahoma */
+.ms-mwstitlearea {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\owsnocr.css */
+/* Verdana */
+.ms-toolbar, /* also in core.css */
+.ms-viewselect a:link, /* also in core.css */
+select, /* also in core.css */
+.ms-formlabel, /* in owsnocr.css, survey.css, forms.css, layouts.css+pickertree.css */
+.ms-radiotext, /* also in forms.css */
+.ms-formbody, /* in owsnocr.css, survey.css */
+.ms-formdescription, /* also in forms.css */
+table.ms-form th, /*...*/
+.ms-long,
+.ms-input,
+.ms-banner a:link,
+.ms-banner a:visited,
+.ms-banner,
+.ms-nav td,
+.ms-nav th,
+.ms-nav a,
+.ms-titlearea,
+.ms-descriptiontext,
+.ms-authoringcontrols,
+.ms-sectionline,
+.ms-propertysheet th,
+.ms-discussiontitle,
+.ms-vh,
+.ms-vb,
+.ms-addnew,
+.ms-cal,
+.ms-datepicker
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+    /* 14\template\layouts\<lcid>\styles\portal.css (SPServer only)*/
+    /* Verdana */
+    .ms-errorinl,
+    .ms-sctabrx,
+    .ms-MenuUILabelFont,
+    .ms-identitypiecenote input,
+    .ms-globalnav td.ms-sbgo,
+    .ms-toolbarContainer,
+    .ms-assetpicker-main th,
+    .ms-assetpicker-untiled,
+    .ms-assetpicker-specialreport,
+    .psrch-Main #tablist,
+    .ms-searchref-main,
+    /* Tahoma */
+    .ms-ptabcn, .ms-sctabcn,
+    .ms-ptabcnhover, .ms-sctabcnhover,
+    .ms-ptabcn A:link, .ms-ptabcn A:visited, .ms-ptabcnhover A:link, .ms-ptabcnhover A:visited, .ms-sctabcn A:link, .ms-sctabcn A:visited, .ms-sctabcnhover A:link, .ms-sctabcnhover A:visited,
+    .ms-ptabcnhover A:hover, .ms-sctabcnhover A:hover,
+    .ms-ptabcf,
+    .ms-ptabcfhover, .ms-sctabcfhover,
+    .ms-ptabcf A:link, .ms-ptabcf A:visited, .ms-ptabcfhover A:link, .ms-ptabcfhover A:visited, .ms-sctabcf A:link, .ms-sctabcf A:visited, .ms-sctabcfhover A:link, .ms-sctabcfhover A:visited,
+    .ms-ptabcfhover A:hover, .ms-sctabcfhover A:hover,
+    .ms-ptabnt A:link, .ms-ptabnt A:visited, .ms-sctabnt A:link, .ms-sctabnt A:visited,
+    .ms-ptabrx,
+    .ms-sctabcf,
+    .ms-articletext,
+    table.ms-applyfiltersinactive,
+    table.ms-applyfiltersactives,
+    table.ms-applyfiltershoverover,
+    .ms-sitedocs-mysiteviewer .ms-WPTitle,
+    .ms-assetpicker-gotourltext,
+    .ms-assetpicker-text,
+    .ms-assetpicker-emptydatatext,
+    .ms-assetpicker-titledescription,
+    .ms-assetpicker-header,
+    .ms-assetpicker-lookintable, .ms-assetpicker-lookintoplabelcell,
+    .ms-assetpicker-toolbar,
+    .ms-selectorlink a, .ms-selectorlink a:visited,
+    .ms-assetpicker-popup-actions lis,
+    .ms-assetpicker-popup-table,
+    .ms-profilelabel,
+    .ms-profilehierarchysectionheader,
+    .ms-profiledescription,
+    .ms-profilebody,
+    .srch-SocDistTitle,
+    .psrch-Description,
+    .psrch-PropLabel,
+    .psrch-PropValue,
+    .psrch-Title,
+    .psrch-Title A:link, .psrch-Title A:visited,
+    .psrch-Metadata,
+    .ms-reftitle,
+    .ms-refsubtitle,
+    .ms-refitems,
+    .ms-refitem A:link, .ms-refitem A:visited,
+    .ms-reftoggle,
+    .ms-reftoggle A:link, .ms-reftoggle A:visited,
+    span.srch-BestBetsWPTitle,
+    .srch-BestBetsTitle,
+    .srch-BB-Description,
+    div.srch-BB-SpecialTerm,
+    div.srch-BB-SpecialTerm div,
+    .srch-InputText,
+    .srch-options,
+    .srch-optionsts,
+    td.ms-vb,
+    th.ms-vh,
+    .ms-pagedescription,
+    .ms-sitedirresultssort,
+    .ms-sitedirresultssort a:link, .ms-sitedirresultssort a:visited,
+    .ms-sitedirresultssort span,
+    .ms-sitedirresultsbody,
+    .ms-sitedirresultstitle a:link, .ms-sitedirresultstitle a:visited,
+    .ms-sitedirresultstitle a:hover,
+    .ms-sitedirresultsdescription span,
+    .ms-sitedirresultsurl a:link, .ms-sitedirresultsurl a:visited,
+    .ms-sitedirresultsurl a:hover,
+    .ms-viewModeContentArea,
+    td.ms-advsrchText,
+    select.ms-advsrchPropertyDDL,
+    select.ms-advsrchOperatorDDL,
+    .ms-advsrchPropValue,
+    select.ms-advsrchAndOrDDL,
+    td.ms-advsrchHeadingText,
+    .ms-redirectControl,
+    .ms-redirectControl a,
+    .ms-searchsummaryTitle as,
+    .ms-searchsummaryUrl a,
+    div.ms-searchsummarydesc,
+    .ms-searchsummarydesc font,
+    .ms-searchChannelTitle span,
+    .ms-searchsummarymorelink a,
+    .ms-searchtaTitle a,
+    .ms-searchtaUrl a,
+    div.ms-searchtadesc,
+    .ms-searchtadesc fonts,
+    .ms-searchtaChannelTitle span,
+    .ms-searchtamorelink a,
+    .srch-HCSocDistTitle {
+        /*font-family: Arial, Sans-Serif !important; /* needed to override several of the selectors (which also has !important)" */
+        font-family: 'StagSansWebBook', Verdana !important;
+    }
+
+
+
+/* 14\template\layouts\<lcid>\styles\PPSImport.css (SPServer only)*/
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\profilebrowser.css (SPServer only)*/
+/* Verdana */
+.ms-spbTree .treenodeonfocus,
+.ms-spbTree .treenodediv,
+.ms-profileBrowserHeaderText,
+.ms-profileBrowserHeaderText a.ms-profileBrowserSilverlightLink:link,
+.ms-profileBrowserHeaderText a.ms-profileBrowserSilverlightLink:visited,
+.ms-profileBrowserSwitcher
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\TEMPLATE\FEATURES\PublishingResources\xx-xx\RCA.CSS  (SPServer only) */
+/* 14\template\layouts\<lcid>\styles\RCA.CSS (SPServer only)*/
+/* Verdana */
+.Normal-P,
+.Normal-H,
+.BodyText-P,
+.BodyText-H,
+.ListBullet-P,
+.ListBullet-H,
+.ListBullet2-P,
+.ListBullet2-H,
+.ListBullet3-P,
+.ListBullet3-H,
+.List-P,
+.List-H,
+.List2-P,
+.List2-H,
+.List3-P,
+.List3-H,
+.BodyText2-P,
+.BodyText2-H,
+.BodyText3-P,
+.BodyText3-H,
+.TOC1-P,
+.TOC1-H,
+.TOC2-P,
+.TOC2-H,
+.TOC3-P,
+.TOC3-H,
+.minorAsciiTheme,
+.minorAnsiTheme,
+.minorEATheme,
+.minorCSTheme
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\search.css */
+/* Verdana */
+.srch-AutoCompList,
+.ms-searchref-main,
+span.srch-BB-URL2,
+.srch-BB-Description2,
+div.srch-BB-SpecialTerm,
+div.srch-BB-SpecialTerm div,
+.srch-InputText,
+.ms-advsrchText-v2box,
+select.ms-advsrchPropertyDDL,
+select.ms-advsrchOperatorDDL,
+.ms-advsrchPropValue,
+select.ms-advsrchAndOrDDL,
+.ms-searchsummaryUrl,
+div.ms-searchsummarydesc,
+.ms-searchsummarydesc font,
+.ms-searchChannelTitle span,
+.ms-searchtadesc div,
+.ms-searchtadesc font,
+div.ms-searchtadesc,
+.ms-searchtaChannelTitle span,
+.srch-stats,
+.ms-sbtable,
+.ms-sbtablealt,
+.ms-sbtext,
+.ms-sbplain,
+select.ms-sbscopes,
+.srch-WPBody,
+.srch-Summary,
+.srch-BBTitle a:link, .srch-BBTitle a:visited, .srch-BBTitle a:hover, /* SP declares the font-family of this as !important! */
+.srch-BBTitle,
+.srch-Page,
+.ms-sctabcn,
+.ms-sctabcnhover,
+.ms-sctabcfhover,
+.ms-sctabcf A:link, .ms-sctabcf A:visited, .ms-sctabcfhover A:link, .ms-sctabcfhover A:visited,
+.ms-sctabcfhover A:hover,
+.ms-sctabnt A:link, .ms-sctabnt A:visited,
+.ms-sctabcf,
+/* Tahoma */
+.srch-SocDistTitle,
+.psrch-Description,
+.psrch-PropLabel,
+.psrch-PropValue,
+.psrch-Title,
+.psrch-Title A:link, .psrch-Title A:visited,
+.psrch-Metadata,
+.srch-BestBetsTitle,
+.srch-BB-Description,
+td.ms-vb,
+th.ms-vh,
+.ms-redirectControl,
+.ms-redirectControl a,
+.srch-HCSocDistTitle,
+.ms-sbplainwithborder,
+.srch-sort-right,
+.srch-Description,
+.srch-Title A:link, .srch-Title A:visited,
+span.srch-BestBetsWPTitle {
+    /*font-family: Arial, Sans-Serif !important; /* !important because one of the styles we're overriding was declared !important by SP */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\searchadmin.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\SiteManagerCustomStyles.css (SPServer only) */
+/* Verdana */
+.ms-sitetitle,
+.ms-sitetitle a,
+.ms-toolbar, .ms-viewtoolbar, .ms-formtoolbar, .ms-toolbarContainer,
+td.ms-menutoolbarheader,
+/* Tahoma */
+.ms-globallinks,
+.ms-globallinks, .ms-globallinks a,
+.ms-smtTreeviewHeader,
+.ms-smtobjectlistHeader,
+.ms-listheaderlabel, .ms-viewselector, .ms-viewselectortext, .ms-viewselectorhover,
+.ms-MenuUIItemTableCell, .ms-MenuUIItemTableCellCompact,
+.ms-MenuUIItemTableCellHover, .ms-MenuUIItemTableCellCompactHover,
+.ms-propertysheet th.ms-vh2, .ms-propertysheet th.ms-vh2-nofilter,
+.ms-vh, .ms-vh2, .ms-vh-icon, .ms-vh-icon-empty, .ms-vhImage, .ms-gb, .ms-gb2, .ms-gbload, .ms-vb, .ms-vb2, .ms-vb-tall, .ms-GRFont, .ms-vb-user, table.ms-disc td, .ms-vh2-nofilter, .ms-vh2-nograd, .ms-vh3-nograd, .ms-vh2-nograd-icon, .ms-vh2-nofilter-icon, .ms-pb, .ms-pb-selected, .ms-ph,
+.ms-toolbar td a,
+.ViewHeaderRightSection table td,
+div#OLDiv td, div#VRDiv td,
+.objectList {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\template\layouts\<lcid>\styles\SocialData.css (SPServer only) */
+/* Verdana */
+.ms-socialDataFrameContents,
+.ms-socialCommentEdit,
+.ms-socialCommentItem,
+.ms-socialCommentPaging,
+.ms-socialStandardheader,
+.ms-socialTagPrivateCheckBox,
+.ms-socialCommentInputBox,
+.ms-socialDataRibbonContents,
+/* Tahoma */
+.ms-socialContextHeader,
+.ms-socialThoughtHeader,
+.ms-socialThoughtLeftHeader,
+.ms-SocialThoughtContent {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\survey.css */
+/* Verdana */
+.ms-formlabel, /* in owsnocr.css, survey.css, forms.css, layouts.css+pickertree.css */
+.ms-formbody, /* in owsnocr.css, survey.css */
+.ms-surveyVBarT,
+.ms-surveyVBarTC,
+.ms-surveyTotal,
+/* Tahoma */
+.ms-surveyHBarLabel {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\TermStoreManager.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+h3.TsmTitle {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\template\layouts\<lcid>\styles\WebTaggingUI.css (SPServer only) */
+/* Verdana */
+.ms-taxonomy-fieldeditor,
+.ms-taxonomy-suggestion-container .ms-taxonomy-suggestion-holder .ms-taxonomy-suggestion-group .ms-taxonomy-table .ms-taxonomy-column .suggestion-path,
+.ms-taxonomy-suggestion-container .ms-taxonomy-suggestion-holder .ms-taxonomy-suggestion-group .ms-taxonomy-table .ms-taxonomy-column .suggestion-non-match-text,
+.ms-taxonomy-suggestion-container .ms-taxonomy-suggestion-holder .ms-taxonomy-suggestion-group .ms-taxonomy-table .ms-taxonomy-column .suggestion-match-text,
+.wt-addnewbutton,
+.wt-feedbackbutton,
+.wt-addbutton,
+/* Tahoma */
+.ms-taxonomy-suggestion-container .ms-taxonomy-suggestion-holder .ms-taxonomy-suggestion-group .ms-taxonomy-suggestion-group-title,
+.ms-taxonoy-ambiguous-header,
+.ms-taxonomy-ambiguous-column {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\wiki.css */
+/* Verdana */
+.ms-wikieditouter
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\wpeditmode.css */
+/* Not used in v4 masterpages. */
+
+/* 14\template\layouts\<lcid>\styles\wpeditmodev4.css */
+/* Verdana */
+.UserShadedRegion,
+.UserCaption,
+.UserButton, .UserInput, .UserSelect,
+.ConnectionChooseActiveTab,
+.ConnectionChooseInactiveTab,
+.ConnectionConfigureInactiveTab,
+.ConnectionConfigureActiveTab,
+.UserConnectionTop,
+.UserGenericText,
+.UserCellHover,
+.UserCellSelected,
+.UserCell,
+.ms-ToolPaneTitle,
+.ms-toolpanefooter,
+.ms-ToolPaneError,
+.ms-ToolStripSelected,
+.ms-ToolStrip,
+.ms-TPTitle,
+.ms-TPBody,
+.ms-SPButton,
+.ms-consolestatus,
+.ms-consolestatus a,
+.ms-consolestatus a:hover,
+.ms-wpadder-sectionhead,
+.ms-wpadder-wpname,
+/* Tahoma */
+.ms-SPZoneLabel,
+.ms-SPZoneCaption,
+.ms-infobar,
+.ms-consolestatus, .ms-consoletoolbar {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\<lcid>\styles\themable\*.css */
+/* These files has the same selectors as the ones above, but with slightly different styles. */
+
+
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\propertygrid.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\MacOS\imagedropdownlist.css (SPServer only) */
+/* Verdana */
+.iddl_Tr_MacOS,
+.iddl_Tr_Disabled_MacOS,
+.iddl_ListItemTr_MacOS
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\MacOS\imagelistbox.css (SPServer only) */
+/* Verdana */
+.ilbx_ListItemTr_MacOS,
+.ilbx_ListItemTr_Disabled_MacOS
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\MacOS\imagelistview.css (SPServer only) */
+/* Verdana */
+.ilvw_ListItemTd_MacOS,
+.ilvw_ListItemTd_Disabled_MacOS
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\Win2K\imagedropdownlist.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\Win2K\imagelistbox.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\Win2K\imagelistview.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\WinXP\imagedropdownlist.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\WinXP\imagelistbox.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\WinXP\imagelistview.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\Chart\WebControls\Resources\WinXP\imagetablist.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+/* (Already sets Arial) */
+
+
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\ifsmain.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ToolbarButtonAnchor,
+.ToolbarViewDropdown,
+.ToolbarViewDropdownSelect,
+.ErrorPageShortMessage,
+.ErrorPageNormalText,
+.ErrorPageItalicText,
+.ErrorPageEmphasisText,
+.ErrorPageDetailsText,
+.ErrorPageDescriptionHeader,
+.ErrorPageSmallText,
+.ErrorPageSmallLabel,
+.ErrorLargeText,
+.errorMore,
+.errorText,
+.DialogContainer,
+.FinalMessageDialog,
+.DialogLayoutTable,
+.DialogButton,
+.StandardDialogBody,
+.StandardDialogButtonArea,
+.DialogButton,
+.DialogLayoutTable,
+.IndocUI {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\CUI.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\CUIoverride.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\EditSurface.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\on_cluster.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\we_cluster.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\Onenote.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\Box4\Word.css (SPServer only) */
+/* Verdana */
+ul.BulletListStyle1,
+ul.BulletListStyle2,
+ul.BulletListStyle3
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\PptResources\powerpointimageclusters.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\PptResources\stylesEdit.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\PptResources\stylesRead.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\PptResources\stylesView.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WacCommon\cui.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WacCommon\cuioverride.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WacCommon\CUIToolbar.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WacCommon\Debug.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WacCommon\Frame.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WordViewer\CUIoverride.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WordViewer\CUIToolbar.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WordViewer\WordViewer.css (SPServer only) */
+/* 14\TEMPLATE\LAYOUTS\INC\<lcid>\WordViewer\wv_cluster.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+/* 14\template\layouts\PPSWebParts\bsm.css (SPServer only) */
+/* Verdana */
+.bsm-vb,
+.bsm-vb a:hover,
+.bsm-error,
+.bsm-toolbarItems,
+.bsm-UserCaption,
+.bsm-UserConfiguration,
+.bsm-Filter,
+.bsm-UserButton, .bsm-UserInput, .bsm-UserSelect,
+.bsm-Title,
+table.bsm-GlobalNav td bsm-links,
+/* Tahoma */
+table.bsm-sctbl,
+.bsm-WPHeader,
+.bsm-stylebox,
+.bsm-descriptiontext,
+.bsm-descriptiontext-paging,
+.bsm-WPBody,
+.bsm-UserShadedRegion,
+.bsm-toolbarCell,
+.bsm-toolbarCell-paging,
+.bsm-UserToolbarItemSelected,
+.bsm-toolbarCellSelected,
+.bsm-UserToolbarWarningMsg,
+.bsm-PageTitle,
+.bsm-pagetitleareaframe table .bsm-pageHeader,
+.bsm-popupIcon,
+.bsm-rvPopupLabel,
+.bsm-rvTitle,
+table.bsm-navitem,
+.bsm-navheader,
+.bsm-NavigationTable,
+.bsm-pagefilterLabel,
+.bsm-pagefilter,
+.bsm-dropownFilter,
+.bsm-AnnotationLinkbtn,
+.bsm-Annotationbtn,
+.bsm-AnnotationGrayText,
+.bsm-AnnotationLabel,
+.bsm-AnnotationCommentTitle,
+.bsm-AnnotationCommentContents,
+.bsm-Top10FilterTableEx,
+#KpiDetails,
+#KpiDetails h1,
+H3.BIDR_report-label,
+SPAN.BIDR_row-label,
+SPAN.BIDR_row-content,
+SPAN.BIDR_text-content,
+SPAN.BIDR_text-content-condensed,
+SPAN.BIDR_section-label,
+SPAN.BIDR_section-toggle,
+CAPTION.BIDR_caption,
+.BIDR_table-status,
+.BIDR_table-thresholds,
+.BIDR_table-indicator,
+.sc-tbc,
+table.sctb th.scc, table.sctb td.scc {
+    /*font-family: Arial, Sans-Serif !important; /* because some of the overriden classes also sets !important */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+/* 14\template\layouts\PPSWebParts\bsmMenu.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.bsm-MenuUIItemTableCell, .bsm-MenuUIItemTableCellCompact,
+.bsm-TooltipUIItemTableCell,
+.bsm-MenuUIItemTableCellHover, .bsm-MenuUIItemTableCellCompactHover,
+.bsm-TooltipUIItemTableCellHover,
+.bsm-Tooltipcell {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+/* 14\template\layouts\PPSWebParts\OlapGrid.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.ph,
+.prh,
+.prv,
+.oc,
+.rh,
+.ch,
+.chsa,
+.dt0,
+.dt1,
+.dtoc,
+.dtgt,
+.dtchsa,
+.dimPropSelectedMember,
+.dimPropCheckBoxes,
+.dimPropFooter,
+.chgMeasTflListItems,
+.chgMeasTflListItem,
+.chgMeasTflFooter,
+.dragBox,
+.FilterDialogHeader,
+.FilterDialogHeaderLabel,
+.FilterDialogContents,
+.FilterDropdown,
+.FilterInput,
+.ValueFilterInput,
+.FilterInputForBetween,
+.FilterWarningLabel,
+.FilterWarningLabelDiv,
+.FilterLabel,
+.FilterLabelForBy,
+.FilterLabelForBetween,
+.FilterFooter,
+.FilterCancel,
+.FilterApply,
+.FilterTupleDropdown,
+.TopFilterTupleDropdown,
+.FilterValueOptionsDropdown,
+.FilterTopOptionsDropdown,
+.FilterTopVarDropdown,
+.FilterValueAndOrDropdown,
+.FilterTargetVarianceCenteredDropdown,
+.FilterByLabelCentered,
+.CommentsTitleInput,
+.CommentsCommentTextArea {
+    /*font-family: Arial, Sans-Serif !important; /* !important is required */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+
+/* 14\template\layouts\PPSWebParts\ParameterTree.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.pps-tree-label,
+.pps-tree-layer3,
+.pps-tree-item-detail,
+.pps-tree-item-detail-message,
+.pps-tree-selector-text,
+.pps-tree-selector-text-rtl,
+.pps-tree-cancel,
+.pps-tree-apply,
+.pps-tree-footer,
+.pps-tree-footer-rtl,
+.pps-tree-loadingDiv,
+.pps-tree-loadingDivNoSpinner,
+.pps-tree-noCancelLoadingDiv,
+.pps-tree-noCancelLoadingText {
+    /*font-family: Arial, Sans-Serif !important; /* !important is required */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+
+
+/* 14\template\layouts\PPSWebParts\ppsDashboard.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+.pps-parameterTitle,
+.pps-parameterError,
+.pps-picker,
+.pps-pickerSelectedItem,
+.pps-pickerList,
+.pps-navigation,
+.pps-breadcrumb,
+.pps-loadingDivNoSpinner,
+.pps-loadingDiv,
+.pps-noCancelLoadingDiv,
+.pps-noCancelLoadingText,
+.pps-loadingDivPreIE8,
+.pps-reportErrorTable,
+.ppsma-pageOverviewList,
+.ppsma-pageOverviewTitle {
+    /*font-family: Arial, Sans-Serif !important; /* !important is required */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+/* 14\template\layouts\PPSWebParts\TimeIntelligenceCalendar.css (SPServer only) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+
+
+
+/* 14\template\layouts\reportserver\styles\<lcid>\Sqlrvdefault.css */
+/* Verdana */
+.sqlrv-CancelLinkText,
+.sqlrv-radiotext, .sqlrv-radiotext LABEL,
+.sqlrv-input,
+/* Tahoma */
+.sqlrv-ApplyButton,
+.sqlrv-DocumentMapBar {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\layouts\styles\corefixup.css */
+/* 14\template\layouts\styles\dlgframe.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+/* 14\template\layouts\<lcid>\styles\mysitelayout.css (SPServer only)*/
+/* 14\template\layouts\styles\MySiteLayout.css (SPServer only) */
+/* Verdana */
+.ms-sectionheader,
+.ms-vb, .ms-descriptiontext,
+.ms-contactcardtext1,
+.ms-contactcardtext2, .ms-contactcardtext2 a,
+.ms-contactcardtext3
+/* Tahoma */
+/* NONE */ {
+    /*font-family: Arial, Sans-Serif !important; /* !important is required */
+    font-family: 'StagSansWebBook', Verdana !important;
+}
+
+/* 14\template\layouts\styles\webAnalytics_cluster.css (SPServer only?) */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
+
+
+
+
+/* 14\template\themes\reflector\theme.css */
+/* Verdana */
+.ms-cal-monthMultiDay, .ms-cal-monthMultiDay a, .ms-cal-monthMultiDay a:link, .ms-cal-monthMultiDay a:active, .ms-cal-monthMultiDay a:visited,
+.ms-cal-weekitem, .ms-cal-weekitem a, .ms-cal-weekitem a:link, .ms-cal-weekitem a:active, .ms-cal-weekitem a:visited, /* also in simple/theme.css */
+.ms-cal-weekitem a:hover, /* also in simple/theme.css */
+/* Tahoma */
+.ms-cal-walldayevent td, .ms-cal-walldayeventRTL td, .ms-cal-walldayeventL td, .ms-cal-walldayeventR td, .ms-cal-walldayeventRTLL td, .ms-cal-walldayeventRTLR td,
+.ms-cal-alldayevent td, .ms-cal-alldayeventRTL td, .ms-cal-alldayeventL td, .ms-cal-alldayeventR td, .ms-cal-alldayeventRTLL td, .ms-cal-alldayeventRTLR td,
+.ms-cal-tdayitem td,
+.ms-cal-gempty,
+.ms-cal-navheader {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+    /* 14\template\themes\simple\theme.css */
+    /* Verdana */
+    .ms-cal-wtopdayselected,
+    .ms-cal-wtopdayselectedRTL,
+    .ms-cal-wtopdayselectedL,
+    .ms-cal-wtopdayselectedRTLL,
+    .ms-cal-weekitem, .ms-cal-weekitem a, .ms-cal-weekitem a:link, .ms-cal-weekitem a:active, .ms-cal-weekitem a:visited, /* also in reflector/theme.css */
+    .ms-cal-weekitem a:hover, /* also in reflector/theme.css */
+    /* Tahoma */
+    .ms-cal-walldayevent td, .ms-cal-walldayeventRTL td, .ms-cal-walldayeventL td, .ms-cal-walldayeventR td, .ms-cal-walldayeventRTLL td {
+        /*font-family: Arial, Sans-Serif;*/
+        font-family: 'StagSansWebBook', Verdana;
+    }
+
+/* all other 14\template\themes\*\theme.css */
+.ms-sitetitle, /* Cardinal: Verdana. */
+.ms-WPTitle, /* Petal: Verdana, also in corev4.css */
+.ms-topnav, /* Belltown: Tahoma, possible some more */
+.ms-quickLaunch /* Plastic: Tahoma */ {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'StagSansWebBook', Verdana;
+}
+
+
+/* 14\template\themes\*\mossExtension.css */
+/* Verdana */
+/* NONE */
+/* Tahoma */
+/* NONE */
