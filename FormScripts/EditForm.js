@@ -3,7 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/sv.min.js" integrity="sha512-DGfo0+uPZLhfqjfMnPPveWvVTSQ7M0RP6bmlkgGgF/ATKSBPKIBzjyCtActIRL3vJ0LJRirvqQHFA0icXpCIew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
  $(document).ready(function () {
-    
+      moment.locale("sv");
     var isItemSelectedToChange = false;
     var storedData = "";
     var storedTitle = "";
@@ -32,7 +32,7 @@
             $("#HPSM_x0020_number").closest('tr').hide();
             
             var data = $( "div[id$='_$TextField_inplacerte']" ).html();
-             var formatedDate = moment().format("YYYY-MM-DD hh:mm");
+             var formatedDate = moment().format("L") + " " + moment().format('LT');
             data = data + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: ";
             if(isItemSelectedToChange) {
                 data = storedData;

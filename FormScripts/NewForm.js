@@ -3,7 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/sv.min.js" integrity="sha512-DGfo0+uPZLhfqjfMnPPveWvVTSQ7M0RP6bmlkgGgF/ATKSBPKIBzjyCtActIRL3vJ0LJRirvqQHFA0icXpCIew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
  $(document).ready(function () {
-   
+       moment.locale("sv");
     filterview($( "select[id^='Category_']" ).val(), $( "select[id^='Status_']" ).val());
     
     $("select[id^='Category_']").change(function() {
@@ -22,7 +22,7 @@
            // $("#Next_x0020_update").closest('tr').show();
             $( "input[id^='Title_']" ).val( "" );
             var date = Date.now();
-            const formatedDate = dayjs(date).format("YYYY-MM-DD hh:mm a")
+        //    const formatedDate = dayjs(date).format("YYYY-MM-DD hh:mm a")
             $( "div[id$='_$TextField_inplacerte']" ).html( "" );
         }
         else if(option != '' && option == 'Incident') {
@@ -38,7 +38,7 @@
              $("#HPSM_x0020_number").closest('tr').hide();
             
             $( "input[id^='Title_']" ).val( "<COUNTRY>-<ID>-<AFFECTED SERVICE AND/OR SYSTEM>-<PROBLEM DESCRIPTION>" );
-            var formatedDate = moment().format("YYYY-MM-DD hh:mm");
+            var formatedDate = moment().format("L") + " " + moment().format('LT');
             //const formatedDate = dayjs(date).format("YYYY-MM-DD hh:mm a")
             $( "div[id$='_$TextField_inplacerte']" ).html( "<p>Description and impact: </p> <br/><p><strong>Estimated Time to Resolve:</strong></p><br><p><b>Update " + formatedDate  + ": </b></p> Text: " );
         }
