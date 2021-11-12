@@ -21,6 +21,8 @@
         if(option != '' && option == 'Change') {
             $("#StartDate").closest('tr').show();
             $("#DueDate").closest('tr').show();
+            $("#HPSM_x0020_number").closest('tr').show();
+            $("#Next_x0020_update").closest('tr').hide();
             storedTitle = $( "input[id^='Title_']" ).val();
             isItemSelectedToChange = true;
             storedData = $( "div[id$='_$TextField_inplacerte']" ).html();
@@ -29,11 +31,24 @@
         
             $("#StartDate").closest('tr').hide();
             $("#DueDate").closest('tr').hide();
+             $("#Next_x0020_update").closest('tr').show();
             $("#HPSM_x0020_number").closest('tr').hide();
             
             var data = $( "div[id$='_$TextField_inplacerte']" ).html();
-             var formatedDate = moment().format("L") + " " + moment().format('LT');
-            data = data + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: ";
+            let firstPart = data.match(/(.*Estimated\s*Time\s*to\s*Resolve:.*\<\/b\>\<\/p\>\<br\>)/g);
+            console.log("first Part",firstPart);
+             let secondPart = data.match(/(\<p\>\<strong\>Update.*)/g);
+            console.log("2nd part",secondPart);
+
+            var formatedDate = moment().format("L") + " " + moment().format('LT');
+
+            if(firstPart != null && secondPart != null) {
+                data = firstPart[0] + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: " +  "<br/>" + secondPart[0];
+            }
+            else {
+                data = data + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: ";
+            }
+            
             if(isItemSelectedToChange) {
                 data = storedData;
                 $( "input[id^='Title_']" ).val( storedTitle);

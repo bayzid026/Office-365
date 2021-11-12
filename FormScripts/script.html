@@ -1,0 +1,324 @@
+<script
+    src="https://postnord.sharepoint.com/:u:/r/sites/pn-broadcast-uat/SiteAssets/shortcut.js?csf=1&web=1&e=ptiReI"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+    src="https://postnord.sharepoint.com/:u:/r/sites/pn-broadcast-uat/SiteAssets/requestbroadcast.js?csf=1&web=1&e=V3pvjn"></script>
+<script
+    src="https://postnord.sharepoint.com/:u:/r/sites/pn-broadcast-uat/SiteAssets/cache.js?csf=1&web=1&e=tOzAEn"></script>
+
+<script src="https://postnord.sharepoint.com/:u:/r/sites/pn-broadcast-uat/SiteAssets/service1.js"></script>
+
+<link rel="stylesheet"
+    href="https://postnord.sharepoint.com/:u:/r/sites/pn-broadcast-uat/SiteAssets/NSD.css?csf=1&web=1&e=j1FgnE" />
+
+
+<DIV style="WIDTH: 100%;margin-top:10px">
+    <DIV class="helpdiv"><A class="alerthelp"
+            href="https://postnord.sharepoint.com/sites/broadcast/SitePages/Subscribe-to-Broadcast.aspx"
+            target="_blank">How to subscribe</A> </DIV>
+    <DIV class="helpdiv"><A class="tipsandtrix" href="#" jQuery171024162869247124374="3">Tips &amp; Tricks</A> </DIV>
+    <DIV id="myalertsdiv"><A class="managealerts" href="#" jQuery171024162869247124374="31">Manage my alerts</A> </DIV>
+    <DIV id="NewItemArea"><A class="anewitem" href="#" jQuery171024162869247124374="11">New BroadCast</A> </DIV>
+</DIV>
+
+<div id="IssueLists" style="width: 100%;margin-top:20px">
+    <div id="AcuteArea" style="width: 220px; float:left;margin-right:10px;"></div>
+    <div id="PlanedArea" style="width: 220px; float:left;margin-right:10px;"></div>
+    <div id="FixedArea" style="width: 220px; float:left;margin-right:0px;"></div>
+</div>
+
+<div class="tipsWrapper" style="display:none">
+    <DIV class="alerthelptoggle pie_first-child" id="tipsandtrixid" style="ZOOM: 1" _pieId="_30">
+        <H5>I want to view the DashBoard in full-screen mode, is that possible?</H5>Yes, you simply press "ctrl + shift
+        + f" on your keyboard and the DashBoard will end up in full-screen mode.<BR><BR>
+        <H5>I'm in full-screen mode, how do I get back to the ordinary DashBoard view again?</H5>You simply press "ctrl
+        + shift + m" to return to the ordinary DashBoard view.<BR>
+        <DIV style="FLOAT: right"><A class="tipsandtrix" href="#" jQuery171024162869247124374="4">Close</A></DIV>
+    </DIV>
+</div>
+<div id="hiddeniframes" style="display:none">
+</div>
+
+
+<div id="notymesincident" style="display:none;">Subscription on current activities created</div>
+<div id="notymeplanned" style="display:none;">Subscription on planned activities created</div>
+
+<script>
+    jQuery(function () {
+        window.broadcastTool = window.broadcastTool || {};
+        window.broadcastTool.services = window.broadcastTool.services || {};
+        var siteUrl = _spPageContextInfo.webAbsoluteUrl;
+        //var listGuid = "%7Bdba6c19b-c8fe-40b2-9944-e1933b5524be%7D";
+        //var contentTypeId = "0x0108006F8133F48D81FB45AF8134601B67804A";
+        var listGuid = "%7B24CA6790-DDED-45BD-BE41-78CFB44CA5FE%7D";
+        var contentTypeId = "0x010800CCE76B23EEA3414A95B516D5A97457D7";
+        var currentGroupID = "1fb99856-1a7a-4782-9898-2868fb86643c";
+        var plannedGroupID = "852b2a67-6a69-4393-8f41-d14b1328910e";
+        var IsEditor = false, currentUser;
+        var iframehtml = "<iframe id='incidentsiframe' src='" + siteUrl + "/_layouts/SubNew.aspx?List=" + listGuid + "&Source=" + siteUrl + "%2FLists%2FNSDTasks%2FAcute%2520issues%2Easpx'></iframe> \
+                      <iframe id='plannediframe' src='" + siteUrl + "/_layouts/SubNew.aspx?List=" + listGuid + "&Source=" + siteUrl + "%2FLists%2FNSDTasks%2FAcute%2520issues%2Easpx'></iframe>"
+        $('#hiddeniframes').html(iframehtml);
+
+        function getTheList() {
+            //  getCurrentUserPermission();
+            $('#AcuteArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            $('#PlanedArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            $('#FixedArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            window.broadcastTool.services.getCurrentUserPermission().done(function (IsEditor) {
+                window.broadcastTool.services.getAlertsKeyCollection(siteUrl, function (subscriptionidCol) {
+                    window.broadcastTool.services.getAcuteListData(siteUrl, subscriptionidCol, listGuid, contentTypeId, currentGroupID, function (strAcuteHtml) {
+                        $('#AcuteArea').html(strAcuteHtml);
+                        window.broadcastTool.services.getPlannedData(siteUrl, subscriptionidCol, listGuid, contentTypeId, plannedGroupID, function (strPlanedHtml) {
+                            $('#PlanedArea').html(strPlanedHtml);
+                            window.broadcastTool.services.getFixedData(siteUrl, subscriptionidCol, listGuid, contentTypeId, function (strFixedHtml) {
+                                $('#FixedArea').html(strFixedHtml);
+                                window.broadcastTool.services.setEditorRights(IsEditor);
+                                clickEventHandlers();
+                            });
+                        });
+
+                    });
+                });
+            });
+        }
+        function clickEventHandlers() {
+            $('.alrtmeimg').click(function () {
+                var options = SP.UI.$create_DialogOptions();
+                options.title = $(this).text();
+                options.url = $(this).closest('div').find('.hiddenalertfield').val();
+                options.dialogReturnValueCallback = Function.createDelegate(null, modalDialogClosedCallback);
+                SP.UI.ModalDialog.showModalDialog(options);
+            });
+
+            $('.alrtmeincidents').click(function () {
+
+                window.broadcastTool.services.GroupOperation(currentGroupID, _spPageContextInfo.userEmail, "add", ".alrtmeincidents")
+                    .done(function (response) {
+                        console.log("data", response);
+                        var alertMeImage = siteUrl + "/SiteAssets/unalertme.png";
+                        $('.alrtmeincidents').attr('src', alertMeImage);
+                        $('.alrtmeincidents').unbind();
+                        $("#notymesincident").fadeTo(5000, 1).fadeOut(1000);
+                        //  window.localStorage.setItem("Current_" + _spPageContextInfo.userEmail, "true");
+                        cacheLong("Current__" + _spPageContextInfo.userEmail, "true", true);
+                        setTimeout(function () {
+                            window.location.reload(true);
+                        }, 6000);
+                    })
+                    .catch(function (error) {
+                        console.log("error", error);
+                    });
+
+            });
+
+
+
+            $('.alrtmeplanned').click(function () {
+                window.broadcastTool.services.GroupOperation(plannedGroupID, _spPageContextInfo.userEmail, "add", ".alrtmeplanned")
+                    .done(function (response) {
+                        console.log("data", response);
+                        var alertMeImage = siteUrl + "/SiteAssets/unalertme.png";
+                        $('.alrtmeplanned').attr('src', alertMeImage);
+                        $('.alrtmeplanned').unbind();
+                        $("#notymeplanned").fadeTo(5000, 1).fadeOut(1000);
+                        // window.localStorage.setItem("Planned_" + _spPageContextInfo.userEmail, "true");
+                        cacheLong("Planned__" + _spPageContextInfo.userEmail, "true", true);
+                        setTimeout(function () {
+                            window.location.reload(true);
+                        }, 6000);
+                    })
+                    .catch(function (error) {
+                        console.log("error", error);
+                    });
+            });
+
+            $('.sender .toggle').click(function () {
+                var $senderContainer = $(this).closest('.item');
+                $senderContainer.toggleClass('selected');
+            });
+
+            $('.unalertimg').click(function () {
+                var options = SP.UI.$create_DialogOptions();
+                options.url = $(this).closest('.sender').find('.alertsubid').val();
+                options.dialogReturnValueCallback = Function.createDelegate(null, modalDialogClosedCallbackDeleteAlert);
+                SP.UI.ModalDialog.showModalDialog(options);
+            });
+
+            $('.unalrtmeheader').click(function () {
+                var alertType = this.nextSibling.textContent;
+
+                var loading = siteUrl + "/SiteAssets/loading.gif";
+                $(this).attr('src', loading);
+
+                var alertMeImage = siteUrl + "/SiteAssets/alertme.png";
+
+                if (alertType == "Current") {
+                    window.broadcastTool.services.GroupOperation(currentGroupID, _spPageContextInfo.userEmail, "delete")
+                        .done(function (response) {
+                            $('#acuteaccordion .unalrtmeheader').attr('src', alertMeImage);
+                            $('#acuteaccordion .unalrtmeheader').unbind();
+                            //  window.localStorage.setItem("Current_" + _spPageContextInfo.userEmail, "false");
+                            cacheLong("Current__" + _spPageContextInfo.userEmail, "false", true);
+                            setTimeout(function () {
+                                window.location.reload(true);
+                            }, 6000);
+                        })
+                        .catch(function (error) {
+                            console.log("error", error);
+                        });
+                }
+                else {
+                    window.broadcastTool.services.GroupOperation(plannedGroupID, _spPageContextInfo.userEmail, "delete")
+                        .done(function (response) {
+                            $('#planedaccordion .unalrtmeheader').attr('src', alertMeImage);
+                            $('#planedaccordion .unalrtmeheader').unbind();
+                            //  window.localStorage.setItem("Planned_" + _spPageContextInfo.userEmail, "false");
+                            cacheLong("Planned__" + _spPageContextInfo.userEmail, "false", true);
+                            setTimeout(function () {
+                                window.location.reload(true);
+                            }, 6000);
+                        })
+                        .catch(function (error) {
+                            console.log("error", error);
+                        });
+                }
+            });
+
+            $('.managealerts').click(function () {
+                var options = SP.UI.$create_DialogOptions();
+                options.url = siteUrl + "/_layouts/MySubs.aspx?IsDlg=1";
+                options.dialogReturnValueCallback = Function.createDelegate(null, modalDialogClosedCallbackDeleteAlert);
+                SP.UI.ModalDialog.showModalDialog(options);
+            });
+        }
+
+        function modalDialogClosedCallbackDeleteAlert(callback) {
+            reloadContent();
+        }
+
+
+        function modalDialogClosedCallback(callback) {
+            if (callback == 1) {
+                reloadContent();
+            }
+        }
+
+        $(document).ready(function () {
+            $('#s4-statusbarcontainer').hide();
+            if (window.PIE) {
+                $('#notymesincident, #notymeplanned, .alerthelptoggle').each(function () {
+                    PIE.attach(this);
+                });
+            }
+
+            $(".tipsandtrix").click(function () {
+                if ($("#tipsandtrixid").is(':hidden')) {
+                    $("#tipsandtrixid").fadeTo(1000, 1);
+                    $(".tipsWrapper").show();
+                }
+                else {
+                    $("#tipsandtrixid").fadeOut(1000);
+                    $(".tipsWrapper").hide();
+                }
+
+            });
+
+
+            shortcut.add("Ctrl+Shift+F", function () {
+                if (!$("form").is(':hidden')) {
+                    $('body').append("<div id='tmpissuelistcontainer' class='ms-WPBody'></div>")
+                    $('.ms-rte-layoutszone-inner').appendTo('#tmpissuelistcontainer');
+
+                    $('body').css({
+                        overflowY: 'scroll'
+                    });
+
+                    $('form').hide();
+                }
+                else {
+                    alert('Already fullscreen');
+                }
+            });
+
+            shortcut.add("Ctrl+Shift+M", function () {
+                window.location = siteUrl + "/SitePages/home.aspx";
+            });
+
+
+
+
+            window.setInterval(function () {
+                reloadContent();
+            }, 120000);
+
+            ExecuteOrDelayUntilScriptLoaded(getTheList, "sp.js");
+        });
+
+        function onError(msg) {
+            //alert(msg);
+            window.location.reload(true);
+        }
+
+        function reloadContent() {
+            $('#AcuteArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            $('#PlanedArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            $('#FixedArea').html('<img src="' + siteUrl + '/SiteAssets/loading.gif">');
+            $('#NewItemArea').html("<a class='anewitem' href='#'>New BroadCast</a>");
+            var iframehtml = "<iframe id='incidentsiframe' src='" + siteUrl + "/_layouts/SubNew.aspx?List=" + listGuid + "&Source=" + siteUrl + "%2FLists%2FNSDTasks%2FAcute%2520issues%2Easpx'></iframe> \
+                      <iframe id='plannediframe' src='" + siteUrl + "/_layouts/SubNew.aspx?List=" + listGuid + "&Source=" + siteUrl + "%2FLists%2FNSDTasks%2FAcute%2520issues%2Easpx'></iframe>"
+            $('#hiddeniframes').html(iframehtml);
+            $('.managealerts').unbind();
+            getTheList();
+        }
+
+        jQuery.fn.centerDiv = function (options) {
+            var o = this;
+            $(window).bind('load resize', function () {
+                $(o).each(function () {
+                    $(this).css({
+                        position: 'absolute',
+                        left: ($(window).width() - $(this).outerWidth()) / 2
+                    });
+                });
+            });
+        }
+
+        function FixRibbonAndWorkspaceDimensions() {
+            ULSxSy: ;
+            g_frl = true;
+            var elmRibbon = GetCachedElement("s4-ribbonrow");
+            var elmWorkspace = GetCachedElement("s4-workspace");
+            var elmTitleArea = GetCachedElement("s4-titlerow");
+            var elmBodyTable = GetCachedElement("s4-bodyContainer");
+            if (!elmRibbon || !elmWorkspace || !elmBodyTable) {
+                return;
+            }
+            if (!g_setWidthInited) {
+                var setWidth = true;
+                if (elmWorkspace.className.indexOf("s4-nosetwidth") > -1)
+                    setWidth = false;
+                g_setWidth = setWidth;
+                g_setWidthInited = true;
+            }
+            else {
+                var setWidth = g_setWidth;
+            }
+            var baseRibbonHeight = RibbonIsMinimized() ? 44 : 135;
+            var ribbonHeight = baseRibbonHeight + g_wpadderHeight;
+            if (GetCurrentEltStyle(elmRibbon, "visibility") == "hidden") {
+                ribbonHeight = 0;
+            }
+
+            // Override default resizing behavior
+            // -- adds padding to the top of the "s4-workspace" <div> if the ribbon exists and has content
+            // -- allows the ribbon to be positioned using CSS instead of JavaScript (more accessible)
+            // -- checks to see if the page is inside a "no-ribbon" dialog
+            if (elmRibbon.children.length > 0 && document.getElementsByTagName("html")[0].className.indexOf('ms-dialog-nr') == -1) {
+                elmWorkspace.style.paddingTop = ribbonHeight + 'px';
+            }
+        }
+
+    });
+
+</script>
