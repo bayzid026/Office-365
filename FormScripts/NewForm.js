@@ -41,7 +41,7 @@
             $( "input[id^='Title_']" ).val( "<COUNTRY>-<ID>-<AFFECTED SERVICE AND/OR SYSTEM>-<PROBLEM DESCRIPTION>" );
             var formatedDate = moment().format("L") + " " + moment().format('LT');
             //const formatedDate = dayjs(date).format("YYYY-MM-DD hh:mm a")
-            $( "div[id$='_$TextField_inplacerte']" ).html( "<p>Description and impact: </p> <br/><p><b>Estimated Time to Resolve:</b></p><br/><p><strong>Update " + formatedDate  + ": </strong></p><p> Text: </p>" );
+            $( "div[id$='_$TextField_inplacerte']" ).html( "<p>Description and impact: </p> <p> Text: </p><p><b>Estimated Time to Resolve:</b></p><br/><p><strong>Update " + formatedDate  + ": </strong></p><p> Text: </p>" );
         }
     }
  });
