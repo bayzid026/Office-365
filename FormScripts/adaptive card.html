@@ -1,0 +1,158 @@
+<script type="application/adaptivecard+json">  
+         {
+    "": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "originator": "cc791dc2-ac77-467b-9e87-8a3f7c3c457a",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Incident Service Interruptions - @{triggerOutputs()?['body/Title']}",
+                    "size": "large",
+                    "wrap": true,
+                    "spacing": "none",
+                    "weight": "bolder"
+                }
+            ],
+            "style": "emphasis",
+            "bleed": true,
+            "spacing": "none"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "* Category",
+                            "wrap": true,
+                            "size": "Small",
+                            "spacing": "None"
+                        }
+                    ],
+                    "width": "auto",
+                    "horizontalAlignment": "Left",
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "  @{triggerOutputs()?['body/Category/Value']}",
+                            "isSubtle": true,
+                            "wrap": true,
+                            "size": "Small",
+                            "horizontalAlignment": "Left",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "width": "stretch",
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "* Status",
+                            "wrap": true,
+                            "size": "Small",
+                            "spacing": "None"
+                        }
+                    ],
+                    "width": "auto",
+                    "horizontalAlignment": "Left",
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "  @{triggerOutputs()?['body/Status/Value']}",
+                            "isSubtle": true,
+                            "wrap": true,
+                            "size": "Small",
+                            "horizontalAlignment": "Left",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "width": "stretch",
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "* Next update",
+                            "wrap": true,
+                            "size": "Small",
+                            "spacing": "None"
+                        }
+                    ],
+                    "width": "auto",
+                    "horizontalAlignment": "Left",
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "spacing": "Small",
+                            "text": "  @{triggerOutputs()?['body/Modified']}",
+                            "isSubtle": true,
+                            "wrap": true,
+                            "size": "Small",
+                            "horizontalAlignment": "Left",
+                            "weight": "Lighter"
+                        }
+                    ],
+                    "width": "stretch",
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
+                }
+            ],
+            "spacing": "None"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Description",
+            "wrap": true,
+            "color": "Dark",
+            "weight": "Bolder",
+            "spacing": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "@{outputs('Html_to_text')?['body']}",
+            "wrap": true,
+            "spacing": "None"
+        },
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+</script>

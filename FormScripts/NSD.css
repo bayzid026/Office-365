@@ -1,0 +1,125 @@
+#notymesincident,
+#notymeplanned {
+  padding: 20px;
+  width: 220px;
+  position: absolute;
+  top: 0px;
+  left: 232px;
+  text-align: center;
+  display: block;
+  background-color: #ffffcc;
+  border-radius: 6px;
+}
+.alrtmeplanned,
+.alrtmeincidents,
+.unalrtmeheader {
+  cursor: pointer;
+}
+.item.selected .sender {
+  border-bottom: 1px solid #dbd4c5;
+}
+.block-inner {
+  position: relative;
+  background: #f6f3ed;
+  border: 1px solid #dbd4c5;
+  margin: 0 0 15px 0;
+}
+.sender img {
+  position: absolute;
+  cursor: pointer;
+}
+
+.sender .toggle {
+  padding: 7px;
+  padding-top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  background: url("/sites/broadcast/SiteAssets/arrow-up.png") 100% 0 no-repeat;
+}
+.sender,
+.publication {
+}
+.sender .itemheading {
+  text-align: center;
+}
+.sender .datefield {
+  margin-bottom: 10px;
+}
+.sender .closedheading {
+  float: left;
+  margin-right: 5px;
+}
+.sender .underheading {
+  margin-right: 10px;
+}
+
+.item {
+  margin-bottom: 10px;
+  border-top: 1px solid #dbd4c5;
+}
+.item .publications {
+  display: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.item-header {
+  margin-top: 10px;
+}
+.item-header h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.item.selected .publications {
+  display: block;
+}
+.item.selected .sender .toggle {
+  background: transparent url("/sites/broadcast/SiteAssets/arrow-down.png") 100%
+    0 no-repeat;
+}
+
+.item.acute {
+  border-left: 5px solid red;
+}
+
+.item.planned {
+  border-left: 5px solid #ffa500;
+}
+
+.item.solved {
+  border-left: 5px solid green;
+}
+
+.alerthelptoggle {
+  width: 630px;
+  position: absolute;
+  z-index: 20000;
+  background-color: #ffffcc;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#IssueLists {
+  float: left;
+}
+
+.helpdiv {
+  float: left;
+  margin-right: 20px;
+}
+#myalertsdiv {
+  float: left;
+  margin-right: 20px;
+}
+#NewItemArea {
+}
+
+#tmpissuelistcontainer {
+  overflow: auto;
+}
+
+/*#notymesincident {position:absolute; top:78px; left:0; width:100%; text-align:center; display:block;}*/
+/*#notymesincident UL {background:#FFF; position:relative; z-index:20000; *display:inline; *padding-left:5px; behavior: url('_layouts/ePostBoxen/js/PIE.htc');}*/

@@ -35,7 +35,7 @@
             $("#HPSM_x0020_number").closest('tr').hide();
             
             var data = $( "div[id$='_$TextField_inplacerte']" ).html();
-            let firstPart = data.match(/(.*Estimated\s*Time\s*to\s*Resolve:.*\<\/b\>\<\/p\>\<br\>)/g);
+            let firstPart = data.match(/(.*Estimated\s*Time\s*to\s*Resolve:.*\<\/b\>\<\/p\>(\<br\>)?)/g);
             console.log("first Part",firstPart);
              let secondPart = data.match(/(\<p\>\<strong\>Update.*)/g);
             console.log("2nd part",secondPart);
@@ -43,10 +43,10 @@
             var formatedDate = moment().format("L") + " " + moment().format('LT');
 
             if(firstPart != null && secondPart != null) {
-                data = firstPart[0] + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: " +  "<br/>" + secondPart[0];
+                data = firstPart[0] + "<br/><p><strong>Update " + formatedDate  +":</strong></p> <p>Text: </p>"  + secondPart[0];
             }
             else {
-                data = data + "<br/><p><strong>Update " + formatedDate  +":</strong></p> Text: ";
+                data = data + "<br/><p><strong>Update " + formatedDate  +":</strong></p> <p>Text: </p>";
             }
             
             if(isItemSelectedToChange) {
